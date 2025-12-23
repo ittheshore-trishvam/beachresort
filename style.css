@@ -1,0 +1,173 @@
+/* Premium styling for Sea Shore Resort website */
+
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+:root {
+  /* Primary palette – turquoise and warm sand tones */
+  --color-primary: hsl(190, 70%, 45%);   /* turquoise */
+  --color-secondary: hsl(30, 80%, 55%); /* warm sand */
+  --color-bg: hsl(210, 20%, 95%);
+  --color-bg-dark: hsl(210, 20%, 15%);
+  --color-text: hsl(210, 10%, 20%);
+  --color-text-light: hsl(210, 10%, 95%);
+  --glass-bg: rgba(255, 255, 255, 0.25);
+  --glass-border: rgba(255, 255, 255, 0.4);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: var(--color-bg);
+  color: var(--color-text);
+  line-height: 1.6;
+}
+
+/* Layout helpers */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Navigation */
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  justify-content: flex-end;
+  padding: 1rem;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: var(--color-text);
+  font-weight: 600;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.navbar a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 100%;
+  height: 2px;
+  background: var(--color-primary);
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.navbar a:hover {
+  color: var(--color-primary);
+}
+
+.navbar a:hover::after {
+  transform: scaleX(1);
+}
+
+/* Hero section */
+.hero {
+  position: relative;
+  height: 80vh;
+  overflow: hidden;
+}
+
+.hero-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.85);
+}
+
+.hero-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: var(--color-text-light);
+  text-align: center;
+  background: var(--glass-bg);
+  padding: 2rem 3rem;
+  border-radius: 12px;
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--glass-border);
+}
+
+.hero-text h1 {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+}
+
+.hero-text p {
+  font-size: 1.2rem;
+}
+
+/* Sections */
+section {
+  padding: 4rem 0;
+}
+
+section h2 {
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+  text-align: center;
+  color: var(--color-primary);
+}
+
+/* Glass‑morphism cards (used for menu items) */
+.card {
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  border-radius: 12px;
+  padding: 1.5rem;
+  backdrop-filter: blur(12px);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+/* Menu grid */
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.menu-item h3 {
+  margin-bottom: 0.5rem;
+  color: var(--color-secondary);
+}
+
+.menu-item p {
+  margin-bottom: 0.5rem;
+}
+
+.menu-item .price {
+  font-weight: 600;
+  color: var(--color-primary);
+}
+
+/* Footer */
+footer {
+  background: var(--color-primary);
+  color: var(--color-text-light);
+  text-align: center;
+  padding: 1rem;
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .navbar ul { justify-content: center; }
+  .hero-text h1 { font-size: 2.2rem; }
+}
