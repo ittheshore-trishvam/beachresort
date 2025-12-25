@@ -265,19 +265,46 @@ header nav {
     background-image: url('dessert2.png');
 }
 
-#img-comfort-1 {
-    background-image: url('main2.png');
+/* Full Menu Image */
+.full-menu-image {
+    margin-top: 4rem;
+    text-align: center;
 }
 
-/* Reusing Risotto for Stew */
-#img-comfort-2 {
-    background-image: url('starter1.png');
+.full-menu-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: var(--border-radius);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
 }
 
-/* Reusing Arancini for Chowder contextually (balls in soup/bowl) */
-#img-comfort-3 {
-    background-image: url('starter1.png');
+/* Menu Section Divider */
+.menu-section-divider {
+    grid-column: 1 / -1;
+    text-align: center;
+    margin: 2rem 0;
+    padding: 1rem 0;
 }
+
+.menu-section-divider h3 {
+    font-size: 1.8rem;
+    color: var(--color-primary);
+    letter-spacing: 2px;
+}
+
+/* Menu Note */
+.menu-note {
+    grid-column: 1 / -1;
+    text-align: center;
+    margin: 1rem 0;
+    padding: 0.5rem 0;
+}
+
+.menu-note p {
+    color: var(--color-text-muted);
+    font-size: 0.95rem;
+}
+
 
 /* Reusing for Tomato Soup */
 
