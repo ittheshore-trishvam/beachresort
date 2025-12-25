@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
     // Menu Filtering
     const tabs = document.querySelectorAll('.menu-tab');
-    const items = document.querySelectorAll('.menu-item');
+    const items = document.querySelectorAll('.menu-item, .menu-section-divider, .menu-note');
 
     tabs.forEach(tab => {
         tab.addEventListener('click', () => {
