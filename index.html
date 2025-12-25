@@ -1,39 +1,207 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sea Shore Resort</title>
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Shore Shell Restaurant | Exquisite Dining Profile</title>
+    <meta name="description"
+        content="Experience the finest culinary delights at The Shore Shell Restaurant. Explore our seasonal menu and book your table today.">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Montserrat:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
 </head>
+
 <body>
-  <header class="hero">
-    <img src="sea_shore_hero_1766491294128.png" alt="Sea Shore Resort" class="hero-image" />
-    <nav class="navbar">
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="menu.html">Restaurant Menu</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
-    <div class="hero-text">
-      <h1>Welcome to Sea Shore Resort</h1>
-      <p>Experience luxury by the turquoise waters.</p>
-    </div>
-  </header>
-  <section class="about">
-    <h2>About Our Resort</h2>
-    <p>Relax in our premium beachfront villas, enjoy world‑class amenities, and savor exquisite cuisine.</p>
-  </section>
-  <section id="contact" class="contact">
-    <h2>Contact Us</h2>
-    <p>Email: info@seashoreresort.com</p>
-    <p>Phone: +1 (555) 123‑4567</p>
-  </section>
-  <footer>
-    <p>&copy; 2025 Sea Shore Resort. All rights reserved.</p>
-  </footer>
+    <header id="main-header">
+        <nav class="container">
+            <a href="#" class="logo">The Shore Shell Restaurant</a>
+            <ul class="nav-links">
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact" class="btn btn-primary">Reserve</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="hero">
+            <div class="hero-overlay"></div>
+            <div class="hero-content container">
+                <h1>Taste the Extraordinary</h1>
+                <p>A culinary journey where tradition meets innovation.</p>
+                <a href="#menu" class="btn btn-primary">View Menu</a>
+            </div>
+        </section>
+
+        <section id="menu" class="container">
+            <div class="section-header">
+                <h2>Our Menu</h2>
+                <div class="divider"></div>
+                <p>Curated by our expert chefs using the freshest seasonal ingredients.</p>
+            </div>
+
+            <div class="menu-categories">
+                <button class="menu-tab active" data-category="all">All</button>
+                <button class="menu-tab" data-category="starters">Starters</button>
+                <button class="menu-tab" data-category="mains">Mains</button>
+                <button class="menu-tab" data-category="comfort">Comfort in a Bowl</button>
+                <button class="menu-tab" data-category="desserts">Desserts</button>
+            </div>
+
+            <div class="menu-grid">
+                <!-- Starters -->
+                <div class="menu-item" data-category="starters">
+                    <div class="menu-img-placeholder" id="img-starter-1"></div>
+                    <div class="menu-details">
+                        <div class="menu-title-price">
+                            <h3>Truffle Arancini</h3>
+                            <span class="price">$14</span>
+                        </div>
+                        <p class="menu-desc">Crispy risotto balls infused with black truffle, served with garlic aioli.
+                        </p>
+                    </div>
+                </div>
+                <div class="menu-item" data-category="starters">
+                    <div class="menu-img-placeholder" id="img-starter-2"></div>
+                    <div class="menu-details">
+                        <div class="menu-title-price">
+                            <h3>Seared Scallops</h3>
+                            <span class="price">$18</span>
+                        </div>
+                        <p class="menu-desc">Pan-seared scallops with cauliflower purée and crispy pancetta.</p>
+                    </div>
+                </div>
+
+                <!-- Mains -->
+                <div class="menu-item" data-category="mains">
+                    <div class="menu-img-placeholder" id="img-main-1"></div>
+                    <div class="menu-details">
+                        <div class="menu-title-price">
+                            <h3>Herb-Crusted Lamb Rack</h3>
+                            <span class="price">$34</span>
+                        </div>
+                        <p class="menu-desc">Served with fondant potatoes, seasonal greens, and a red wine reduction.
+                        </p>
+                    </div>
+                </div>
+                <div class="menu-item" data-category="mains">
+                    <div class="menu-img-placeholder" id="img-main-2"></div>
+                    <div class="menu-details">
+                        <div class="menu-title-price">
+                            <h3>Wild Mushroom Risotto</h3>
+                            <span class="price">$26</span>
+                        </div>
+                        <p class="menu-desc">Creamy arborio rice with foraged mushrooms, parmesan crisp, and truffle
+                            oil.</p>
+                    </div>
+                </div>
+
+
+                <!-- Comfort in a Bowl -->
+                <div class="menu-item" data-category="comfort">
+                    <div class="menu-details">
+                        <div class="menu-title-price">
+                            <h3>Seafood Fisherman's Stew</h3>
+                            <span class="price">$28</span>
+                        </div>
+                        <p class="menu-desc">A hearty tomato-based stew with fresh catch of the day, mussels, and
+                            prawns.</p>
+                    </div>
+                </div>
+                <div class="menu-item" data-category="comfort">
+                    <div class="menu-details">
+                        <div class="menu-title-price">
+                            <h3>Creamy Clam Chowder</h3>
+                            <span class="price">$22</span>
+                        </div>
+                        <p class="menu-desc">Rich and creamy soup with tender clams, potatoes, and savory bacon bits.
+                        </p>
+                    </div>
+                </div>
+                <div class="menu-item" data-category="comfort">
+                    <div class="menu-img-placeholder" id="img-comfort-3"></div>
+                    <div class="menu-details">
+                        <div class="menu-title-price">
+                            <h3>Classic Tuscan Tomato Soup</h3>
+                            <span class="price">₹ 225</span>
+                        </div>
+                        <p class="menu-desc">Rich, velvety tomato and herb blend, topped with Genovese basil.</p>
+                    </div>
+                </div>
+
+                <!-- Desserts -->
+                <div class="menu-item" data-category="desserts">
+                    <div class="menu-img-placeholder" id="img-dessert-1"></div>
+                    <div class="menu-details">
+                        <div class="menu-title-price">
+                            <h3>Dark Chocolate Fondant</h3>
+                            <span class="price">$12</span>
+                        </div>
+                        <p class="menu-desc">Molten center chocolate cake served with vanilla bean ice cream.</p>
+                    </div>
+                </div>
+                <div class="menu-item" data-category="desserts">
+                    <div class="menu-img-placeholder" id="img-dessert-2"></div>
+                    <div class="menu-details">
+                        <div class="menu-title-price">
+                            <h3>Lemon Basil Tart</h3>
+                            <span class="price">$11</span>
+                        </div>
+                        <p class="menu-desc">Zesty lemon curd in a buttery pastry shell, topped with italian meringue.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="about">
+            <div class="container two-col">
+                <div class="about-text">
+                    <h2>Our Story</h2>
+                    <div class="divider"></div>
+                    <p>Founded in 2010, The Shore Shell Restaurant was born from a passion for authentic flavors and
+                        warm
+                        hospitality. We believe that great food should be an experience, one that lingers in your memory
+                        long after the last bite.</p>
+                    <p>Our chefs source ingredients locally, ensuring that every dish supports our community and tastes
+                        as fresh as possible.</p>
+                </div>
+                <div class="about-image-placeholder" id="img-about"></div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="contact">
+        <div class="container footer-content">
+            <div class="footer-col">
+                <h4>The Shore Shell Restaurant</h4>
+                <p>9, Erikarai/Lake View Road,<br>Pudhukuppam Village, Purnankuppam,<br>Puducherry - 605007</p>
+            </div>
+            <div class="footer-col">
+                <h4>Hours</h4>
+                <p>Breakfast: 7:00 - 10:00<br>Lunch: 12:30 - 15:00<br>Dinner: 19:00 - 22:00</p>
+            </div>
+            <div class="footer-col">
+                <h4>Contact</h4>
+                <p>+91 89258 98913<br>fnb.theshore@gmail.com</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 The Shore Shell Restaurant. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
+
 </html>
-
-
