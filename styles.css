@@ -1,18 +1,23 @@
 :root {
-    --color-bg: #121212;
-    --color-surface: #1e1e1e;
-    --color-primary: #d4af37;
-    /* Gold */
-    --color-primary-hover: #f9ce4e;
-    --color-text: #f0f0f0;
-    --color-text-muted: #a0a0a0;
+    --color-bg: #f0f7f8;
+    --color-surface: rgba(255, 255, 255, 0.75);
+    --color-primary: #008b8b;
+    /* Sea Teal */
+    --color-primary-hover: #1de9b6;
+    --color-accent: #ff8a65;
+    /* Coral accent */
+    --color-text: #1a2a3a;
+    --color-text-muted: #546e7a;
     --font-heading: 'Cormorant Garamond', serif;
     --font-body: 'Montserrat', sans-serif;
     --spacing-sm: 1rem;
     --spacing-md: 2rem;
     --spacing-lg: 4rem;
-    --border-radius: 8px;
-    --transition: all 0.3s ease;
+    --border-radius: 16px;
+    --transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    --glass-blur: blur(12px);
+    --glass-border: 1px solid rgba(255, 255, 255, 0.3);
+    --shadow-soft: 0 8px 32px 0 rgba(0, 0, 0, 0.08);
 }
 
 * {
@@ -27,6 +32,53 @@ body {
     color: var(--color-text);
     line-height: 1.6;
     overflow-x: hidden;
+    position: relative;
+    min-height: 100vh;
+}
+
+.ocean-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #e0f2f1 0%, #f0f7f8 50%, #ffffff 100%);
+    z-index: -2;
+}
+
+.blob {
+    position: fixed;
+    border-radius: 50%;
+    filter: blur(80px);
+    z-index: -1;
+    opacity: 0.5;
+    animation: move 20s infinite alternate;
+}
+
+.blob-1 {
+    width: 400px;
+    height: 400px;
+    background: #b2ebf2;
+    top: -100px;
+    right: -100px;
+}
+
+.blob-2 {
+    width: 500px;
+    height: 500px;
+    background: #e0f2f1;
+    bottom: -150px;
+    left: -150px;
+}
+
+@keyframes move {
+    from {
+        transform: translate(0, 0) scale(1);
+    }
+
+    to {
+        transform: translate(50px, 50px) scale(1.1);
+    }
 }
 
 h1,
@@ -85,10 +137,11 @@ img {
 }
 
 .divider {
-    height: 2px;
-    width: 60px;
-    background-color: var(--color-primary);
+    height: 3px;
+    width: 80px;
+    background: linear-gradient(to right, var(--color-primary), var(--color-primary-hover));
     margin: 1rem auto 2rem;
+    border-radius: 2px;
 }
 
 /* Header */
@@ -97,10 +150,13 @@ header {
     top: 0;
     left: 0;
     width: 100%;
-    background: rgba(18, 18, 18, 0.95);
-    padding: 1.5rem 0;
+    background: rgba(255, 255, 255, 0.6);
+    backdrop-filter: var(--glass-blur);
+    -webkit-backdrop-filter: var(--glass-blur);
+    padding: 1.2rem 0;
     z-index: 1000;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    border-bottom: var(--glass-border);
+    transition: var(--transition);
 }
 
 header nav {
@@ -127,6 +183,8 @@ header nav {
     font-size: 0.9rem;
     text-transform: uppercase;
     letter-spacing: 1px;
+    color: var(--color-text);
+    font-weight: 500;
 }
 
 .nav-links a:hover {
@@ -136,7 +194,7 @@ header nav {
 /* Hero */
 #hero {
     height: 100vh;
-    background-image: url('hero_image.png');
+    background-image: url('hero_uploaded.jpg');
     /* Will be generated */
     background-size: cover;
     background-position: center;
@@ -153,7 +211,7 @@ header nav {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.6);
+    background: linear-gradient(to bottom, rgba(224, 242, 241, 0.4), rgba(255, 255, 255, 0.2));
 }
 
 .hero-content {
@@ -164,16 +222,17 @@ header nav {
 }
 
 .hero-content h1 {
-    font-size: 4rem;
+    font-size: 5rem;
     margin-bottom: 1rem;
-    color: #fff;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    color: var(--color-text);
+    text-shadow: 2px 2px 8px rgba(255, 255, 255, 0.8);
 }
 
 .hero-content p {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     margin-bottom: 2rem;
-    color: #e0e0e0;
+    color: var(--color-text-muted);
+    font-weight: 500;
 }
 
 /* Menu Section */
@@ -183,7 +242,10 @@ header nav {
 }
 
 .section-header h2 {
-    font-size: 2.5rem;
+    font-size: 3rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin-bottom: 0.5rem;
 }
 
 .menu-categories {
@@ -199,17 +261,26 @@ header nav {
     border: none;
     color: var(--color-text-muted);
     font-family: var(--font-body);
-    font-size: 1rem;
+    font-size: 0.9rem;
+    font-weight: 600;
     cursor: pointer;
-    padding: 0.5rem 1rem;
+    padding: 0.8rem 1.5rem;
     transition: var(--transition);
-    border-bottom: 2px solid transparent;
+    border-radius: 30px;
+    background: rgba(255, 255, 255, 0.5);
+    border: 1px solid transparent;
 }
 
-.menu-tab.active,
-.menu-tab:hover {
+.menu-tab.active {
+    background: var(--color-primary);
+    color: #ffffff;
+    box-shadow: 0 4px 15px rgba(0, 139, 139, 0.3);
+}
+
+.menu-tab:hover:not(.active) {
+    background: rgba(255, 255, 255, 0.8);
     color: var(--color-primary);
-    border-bottom-color: var(--color-primary);
+    border-color: var(--color-primary);
 }
 
 .menu-grid {
@@ -220,12 +291,16 @@ header nav {
 
 .menu-item {
     background: var(--color-surface);
+    backdrop-filter: var(--glass-blur);
+    -webkit-backdrop-filter: var(--glass-blur);
+    border: var(--glass-border);
     border-radius: var(--border-radius);
     overflow: hidden;
     transition: var(--transition);
     text-align: left;
     display: flex;
     flex-direction: column;
+    box-shadow: var(--shadow-soft);
 }
 
 .menu-item:hover {
@@ -306,18 +381,12 @@ header nav {
 }
 
 
-/* Reusing for Tomato Soup */
-
-#img-comfort-1 {
-    background-image: url('main2.png');
+/* CSS Image Filters for Coastal Vibe */
+.menu-img-placeholder,
+#hero,
+.about-image-placeholder {
+    filter: brightness(1.1) contrast(1.05) saturate(1.2);
 }
-
-/* Reusing Risotto for Stew */
-#img-comfort-2 {
-    background-image: url('starter1.png');
-}
-
-/* Reusing Arancini for Chowder contextually (balls in soup/bowl) */
 
 .menu-details {
     padding: 1.5rem;
@@ -334,7 +403,7 @@ header nav {
 
 .menu-title-price h3 {
     font-size: 1.3rem;
-    color: #fff;
+    color: var(--color-text);
 }
 
 .menu-title-price .price {
@@ -351,7 +420,7 @@ header nav {
 /* About Section */
 #about {
     padding: var(--spacing-lg) var(--spacing-sm);
-    background: #151515;
+    background: #ffffff;
 }
 
 .two-col {
@@ -372,9 +441,18 @@ header nav {
 
 /* Footer */
 footer {
-    background: #000;
+    background: #1a2a3a;
+    color: #ffffff;
     padding: 4rem 0 0;
     border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+footer h4 {
+    color: var(--color-primary-hover);
+}
+
+footer .footer-col p {
+    color: #cfd8dc;
 }
 
 .footer-content {
