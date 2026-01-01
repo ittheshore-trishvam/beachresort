@@ -1,3 +1,7 @@
+html {
+    scroll-behavior: smooth;
+}
+
 :root {
     --color-bg: #f0f7f8;
     --color-surface: rgba(255, 255, 255, 0.75);
@@ -395,10 +399,17 @@ header nav {
 .menu-title-price {
     display: flex;
     justify-content: space-between;
-    align-items: baseline;
+    align-items: flex-start;
+    /* Align top for two-line headers */
     margin-bottom: 0.5rem;
     border-bottom: 1px dashed rgba(255, 255, 255, 0.1);
     padding-bottom: 0.5rem;
+}
+
+.menu-title-wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
 }
 
 .menu-title-price h3 {
@@ -408,8 +419,17 @@ header nav {
 
 .menu-title-price .price {
     color: var(--color-primary);
-    font-weight: 600;
-    font-size: 1.1rem;
+    font-weight: 700;
+    font-size: 1.5rem;
+    /* Significant prominence */
+    margin-left: auto;
+    white-space: nowrap;
+    line-height: 1.2;
+}
+
+.dietary-symbols {
+    font-size: 0.85rem;
+    opacity: 0.8;
 }
 
 .menu-desc {
@@ -492,6 +512,72 @@ footer .footer-col p {
         opacity: 1;
         transform: translateY(0);
     }
+}
+
+/* Back to Top Button */
+.back-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 60px;
+    height: 60px;
+    background: var(--color-primary);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 700;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    visibility: hidden;
+    transition: var(--transition);
+    z-index: 999;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+}
+
+.back-to-top.visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+.back-to-top:hover {
+    background: var(--color-primary-hover);
+    transform: translateY(-5px);
+    color: white;
+}
+
+/* Back to Categories Link */
+.back-to-categories-wrap {
+    grid-column: 1 / -1;
+    text-align: center;
+    margin-top: 3rem;
+    padding-bottom: 2rem;
+}
+
+.back-to-categories {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--color-primary);
+    text-decoration: none;
+    font-weight: 600;
+    transition: var(--transition);
+    cursor: pointer;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.back-to-categories:hover {
+    color: var(--color-primary-hover);
+    transform: translateY(-3px);
 }
 
 /* Responsive */
