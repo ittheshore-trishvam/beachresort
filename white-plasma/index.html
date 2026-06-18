@@ -1,0 +1,1320 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shell Restaurant | Exquisite Dining Profile</title>
+    <meta name="description"
+        content="Experience the finest culinary delights at Shell Restaurant. Explore our seasonal menu and book your table today.">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Montserrat:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="ocean-bg"></div>
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+
+    <header id="main-header">
+        <nav class="container">
+            <a href="#" class="logo">Shell Restaurant</a>
+            <ul class="nav-links">
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact" class="btn btn-primary">Reserve</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="hero">
+            <div class="hero-overlay"></div>
+            <div class="hero-content container">
+                <h1>Taste the Extraordinary</h1>
+                <p>A culinary journey where tradition meets innovation.</p>
+                <a href="#menu" class="btn btn-primary">View Menu</a>
+            </div>
+        </section>
+
+        
+        <section id="menu" class="container">
+            <div class="section-header">
+                <h2>Our Menu</h2>
+                <div class="divider"></div>
+                <p>Curated by our expert chefs using the freshest seasonal ingredients.</p>
+            </div>
+
+            <!-- Outlet Selector -->
+            <div class="outlet-selector">
+                <button class="outlet-tab active" data-outlet="restaurants">
+                    <span class="outlet-icon">🍽️</span> Restaurants
+                </button>
+                <button class="outlet-tab" data-outlet="room-service">
+                    <span class="outlet-icon">🛎️</span> Room Service
+                </button>
+                <button class="outlet-tab" data-outlet="beverage">
+                    <span class="outlet-icon">🍹</span> Beverage
+                </button>
+            </div>
+
+            <!-- RESTAURANTS OUTLET -->
+            <div class="outlet-content active" id="outlet-restaurants">
+                <div class="menu-categories">
+                <button class="menu-tab active" data-category="all">All</button>
+                <button class="menu-tab" data-category="comfort">Comfort in a Bowl</button>
+                <button class="menu-tab" data-category="seafood">Shell Fish & Finfish Bounty</button>
+                <button class="menu-tab" data-category="vegetarian">Vegetarian Bites</button>
+                <button class="menu-tab" data-category="non-vegetarian">Non Vegetarian Bites</button>
+                <button class="menu-tab" data-category="taste-west">Taste of the West</button>
+                <button class="menu-tab" data-category="farm-table">Farm-to-Table</button>
+                <button class="menu-tab" data-category="non-veg-galore">Non-Veg Galore</button>
+                <button class="menu-tab" data-category="sugar-symphony">Sugar Symphony</button>
+                <button class="menu-tab" data-category="late-night">Late Night</button>
+                
+            </div>
+
+            <div class="menu-grid">
+                <!-- Comfort in a Bowl -->
+                <div class="menu-section-divider" data-category="comfort">
+                    <h3><strong>COMFORT IN A BOWL</strong></h3>
+                </div>
+                <div class="menu-item" data-category="comfort">
+                    <div class="menu-details">
+                        <div class="menu-title-price">
+                            <h3>Classic Tuscan Tomato Soup <span class="dietary-symbols">🌱</span></h3>
+                            <span class="price">₹ 225</span>
+                        </div>
+                        <p class="menu-desc">Rich, velvety tomato and herb blend, topped with Genovese basil.</p>
+                    </div>
+                </div>
+                <div class="menu-item" data-category="comfort">
+                    <div class="menu-details">
+                        <div class="menu-title-price">
+                            <h3>Tom ka Gai <span class="dietary-symbols">🌱 🔴 🐟</span></h3>
+                            <span class="price">₹ 300</span>
+                        </div>
+                        <p class="menu-desc">Thai coconut chicken soup infused with coconut milk, lemongrass, galangal,
+                            kaffir and a soft chili warmth.</p>
+                    </div>
+                </div>
+                <div class="menu-item" data-category="comfort">
+                    <div class="menu-details">
+                        <div class="menu-title-price">
+                            <h3>Kang Keaw wan <span class="dietary-symbols">🌱 🔴 🐟</span></h3>
+                            <span class="price">₹ 300</span>
+                        </div>
+                        <p class="menu-desc">Fragrant green curry simmered in rich coconut milk green chilies,
+                            lemongrass, Thai herbs, and tender meat or vegetables.</p>
+                    </div>
+                </div>
+                <div class="menu-item" data-category="comfort">
+                    <div class="menu-details">
+                        <div class="menu-title-price">
+                            <h3>Mexican Crunchy Tortilla Broth <span class="dietary-symbols">🌱 🔴 🐟</span></h3>
+                            <span class="price">₹ 300</span>
+                        </div>
+                        <p class="menu-desc">Hearty tomato-chili soup simmered with spices, corn, and beans, topped with
+                            crispy tortilla strips and fresh cilantro.</p>
+                    </div>
+                </div>
+                <div class="menu-item" data-category="comfort">
+                    <div class="menu-details">
+                        <div class="menu-title-price">
+                            <div class="menu-title-wrap">
+                                <h3>Classic Indo-Chinese Soup</h3>
+                                <span class="dietary-symbols">🌱 🔴 🐟</span>
+                            </div>
+                            <span class="price">₹ 300</span>
+                        </div>
+                        <p class="menu-desc">Bold Indo-Chinese fusion broth infused with spices, garlic, ginger, soy
+                            sauce, and veggies.</p>
+                    </div>
+                </div>
+
+                <!-- Garden Fresh Items -->
+                <div class="menu-item" data-category="comfort">
+                    <div class="menu-details">
+                        <div class="menu-title-price">
+                            <h3>Classic Caesar's Salad <span class="dietary-symbols">🌱 🔴</span></h3>
+                            <span class="price">₹ 300 / 350</span>
+                        </div>
+                        <p class="menu-desc">Crisp romaine in a creamy Caesar dressing, finished with Parmesan and
+                            garlic croutons.</p>
+                    </div>
+                </div>
+                <div class="menu-item" data-category="comfort">
+                    <div class="menu-details">
+                        <div class="menu-title-price">
+                            <h3>Nature's Bounty Salad <span class="dietary-symbols">🌱</span></h3>
+                            <span class="price">₹ 300</span>
+                        </div>
+                        <p class="menu-desc">Vibrant mix of greens, lettuce, and crisp vegetables with lemon and chili.
+                        </p>
+                    </div>
+                </div>
+                <div class="menu-item" data-category="comfort">
+                    <div class="menu-details">
+                        <div class="menu-title-price">
+                            <h3>Mediterranean-Asian Fusion <span class="dietary-symbols">🌱</span> Salad</h3>
+                            <span class="price">₹ 325</span>
+                        </div>
+                        <p class="menu-desc">Vibrant salad combining crisp greens, fresh vegetables, cottage cheese,
+                            olives, and zesty fusion twist.</p>
+                    </div>
+                </div>
+                <div class="menu-item" data-category="comfort">
+                    <div class="menu-details">
+                        <div class="menu-title-price">
+                            <h3>Tex-Mex Salad <span class="dietary-symbols">🌱 🔴</span></h3>
+                            <span class="price">₹ 300 / 350</span>
+                        </div>
+                        <p class="menu-desc">Crisp greens, tomatoes, corn, black beans, and tortilla strips, all tossed
+                            in a chili-lime dressing — pure fiesta.</p>
+                    </div>
+                </div>
+
+                <!-- Seafood Items -->
+
+                <!-- Seafood Items -->
+                <div class="menu-section-divider" data-category="seafood">
+                    <h3><strong>SHELL FISH & FINFISH BOUNTY</strong></h3>
+                </div>
+                <div class="menu-item" data-category="seafood">
+                    <div class="menu-details">
+                        <div class="menu-title-price">
+                            <h3>Coastal Seafood Medley <span class="dietary-symbols">🐟 🔴</span> Platter</h3>
+                            <span class="price">₹ 2400</span>
+                        </div>
+                        <p class="menu-desc">Fresh bay seafood—Crab, Pomfret, Mahi Mahi, and Prawns.</p>
+                    </div>
+                </div>
+                <div class="menu-item" data-category="seafood">
+                    <div class="menu-details">
+                        <div class="menu-title-price">
+                            <h3>Flame-Grilled Lobster <span class="dietary-symbols">🐟 🔴</span></h3>
+                            <span class="price">₹ 6 /grm</span>
+                        </div>
+                        <p class="menu-desc">Smoky grilled split lobster with herb butter garlic sauce.</p>
+                    </div>
+                </div>
+                <div class="menu-item" data-category="seafood">
+                    <div class="menu-details">
+                        <div class="menu-title-price">
+                            <h3>Pomfret in Chef's Spice Blend (350 Grms) <span class="dietary-symbols">🐟 🔴</span></h3>
+                            <span class="price">₹ 1200</span>
+                        </div>
+                        <p class="menu-desc">Whole Pomfret in South Indian or Tandoori style.</p>
+                    </div>
+                </div>
+
+
+                <div class="menu-item" data-category="seafood">
+                    <div class="menu-details">
+                        <div class="menu-title-price">
+                            <h3>Prawn Ghee Roast <span class="dietary-symbols">🐟 🔴</span></h3>
+                            <span class="price">₹ 750</span>
+                        </div>
+                        <p class="menu-desc">Signature Mangalorean delicacy featuring prawns cooked with a spicy-sour
+                            masala.</p>
+                    </div>
+                </div>
+                <div class="menu-item" data-category="seafood">
+                    <div class="menu-details">
+                        <div class="menu-title-price">
+                            <h3>Nadan Prawn Pepper fry <span class="dietary-symbols">🐟 🔴</span></h3>
+                            <span class="price">₹ 750</span>
+                        </div>
+                        <p class="menu-desc">Fresh Prawns sauteed with onion, tomato and freshly ground black pepper.
+                        </p>
+                    </div>
+                </div>
+                <div class="menu-item" data-category="seafood">
+                    <div class="menu-details">
+                        <div class="menu-title-price">
+                            <h3>Ocean's Crab Guest way <span class="dietary-symbols">🐟 🔴</span></h3>
+                            <span class="price">₹ 750</span>
+                        </div>
+                        <p class="menu-desc">Chefs options or Crabs cooked to suit your preferred flavours and spice
+                            level.</p>
+                    </div>
+                </div>
+                <div class="menu-item" data-category="seafood">
+                    <div class="menu-details">
+                        <div class="menu-title-price">
+                            <h3>Crunchy Calamari Bites <span class="dietary-symbols">🐟 🔴</span></h3>
+                            <span class="price">₹ 650</span>
+                        </div>
+                        <p class="menu-desc">Marinated squids coated with aromatic spices and deep-fried to perfection.
+                        </p>
+                    </div>
+                </div>
+                <div class="menu-item" data-category="seafood">
+                    <div class="menu-details">
+                        <div class="menu-title-price">
+                            <h3>Fish Cafreal <span class="dietary-symbols">🐟 🔴</span></h3>
+                            <span class="price">₹ 650</span>
+                        </div>
+                        <p class="menu-desc">Pan fried goan delicacy with a tangy flavour.</p>
+                    </div>
+                </div>
+
+                <!-- Vegetarian Items -->
+
+                <!-- Vegetarian Items -->
+                <div class="menu-section-divider" data-category="vegetarian">
+                    <h3><strong>VEGETARIAN BITES</strong></h3>
+                </div>
+                <div class="menu-item" data-category="vegetarian">
+                    <div class="menu-details">
+                        <div class="menu-title-price">
+                            <h3>Medley Sakahari Platter <span class="dietary-symbols">🌱</span></h3>
+                            <span class="price">₹ 1200</span>
+                        </div>
+                        <p class="menu-desc">An assortment of crispy bites, grilled vegetables, paneer specialties, and chef-selected accompaniments served with flavorful dips and chutneys.</p>
+                    </div>
+                </div>
+                <div class="menu-item" data-category="vegetarian">
+                    <div class="menu-details">
+                        <div class="menu-title-price">
+                            <h3>Broccoli Malai Treat <span class="dietary-symbols">🌱</span></h3>
+                            <span class="price">₹ 600</span>
+                        </div>
+                        <p class="menu-desc">Tender broccoli in a creamy malai sauce with mild spices and a hint of
+                            butter.</p>
+                    </div>
+                </div>
+                <div class="menu-item" data-category="vegetarian">
+                    <div class="menu-details">
+                        <div class="menu-title-price">
+                            <h3>Charfire Paneer Bites - Choice of Marination Achari / Malai / Lahori <span
+                                    class="dietary-symbols">🌱</span></h3>
+                            <span class="price">₹ 550</span>
+                        </div>
+                        <p class="menu-desc">Creamy paneer cubes marinated in spiced yogurt and herbs, Char grilled in a
+                            tandoori pot.</p>
+                    </div>
+                </div>
+                <div class="menu-item" data-category="vegetarian">
+                    <div class="menu-details">
+                        <div class="menu-title-price">
+                            <h3>Turkish Shish Kebab (veg) <span class="dietary-symbols">🌱</span></h3>
+                            <span class="price">₹ 500</span>
+                        </div>
+                        <p class="menu-desc">Turkish-style skewers of marinated paneer and fresh vegetables, grilled and
+                            served with garlic aioli.</p>
+                    </div>
+                </div>
+                <div class="menu-item" data-category="vegetarian">
+                    <div class="menu-details">
+                        <div class="menu-title-price">
+                            <h3>Gourmets Mushroom Delights <span class="dietary-symbols">🌱</span></h3>
+                            <span class="price">₹ 450</span>
+                        </div>
+                        <p class="menu-desc">Crunchy fried mushrooms stuffed with spinach, herbs, cheese, and spices,
+                            paired with peri peri mayo.</p>
+                    </div>
+                </div>
+                <div class="menu-item" data-category="vegetarian">
+                    <div class="menu-details">
+                        <div class="menu-title-price">
+                            <h3>Honey-Drizzled Crispy Corn <span class="dietary-symbols">🌱</span></h3>
+                            <span class="price">₹ 450</span>
+                        </div>
+                        <p class="menu-desc">Brittle golden baby corn tossed in a sweet and mildly spicy honey-chili
+                            glaze.</p>
+                    </div>
+                </div>
+                <div class="menu-item" data-category="vegetarian">
+                    <div class="menu-details">
+                        <div class="menu-title-price">
+                            <h3>Wok-Fried Chili Cauliflower <span class="dietary-symbols">🌱</span></h3>
+                            <span class="price">₹ 450</span>
+                        </div>
+                        <p class="menu-desc">Crispy cauliflower tossed in a bold, tangy chili-garlic sauce with bell
+                            peppers, spring onions, and spices.</p>
+                    </div>
+                </div>
+
+                <!-- Non Vegetarian Items -->
+
+                <!-- Non Vegetarian Items -->
+                <div class="menu-section-divider" data-category="non-vegetarian">
+                    <h3><strong>NON VEGETARIAN BITES</strong></h3>
+                </div>
+                <div class="menu-item" data-category="non-vegetarian">
+                    <div class="menu-details">
+                        <div class="menu-title-price">
+                            <h3>Delux Mansahari Platter <span class="dietary-symbols">🔴</span></h3>
+                            <span class="price">₹ 1400</span>
+                        </div>
+                        <p class="menu-desc">Fresh bay seafood—Crab, Pomfret, Mahi Mahi, and Prawns.</p>
+                    </div>
+                </div>
+                <div class="menu-item" data-category="non-vegetarian">
+                    <div class="menu-details">
+                        <div class="menu-title-price">
+                            <h3>Rustic Masala Mutton Roast <span class="dietary-symbols">🔴</span></h3>
+                            <span class="price">₹ 700</span>
+                        </div>
+                        <p class="menu-desc">Slow-cooked tender mutton in aromatic spices with onions, tomatoes, and
+                            curry leaves.</p>
+                    </div>
+                </div>
+                <div class="menu-item" data-category="non-vegetarian">
+                    <div class="menu-details">
+                        <div class="menu-title-price">
+                            <h3>Crispy Cajun Fish strips <span class="dietary-symbols">🔴</span></h3>
+                            <span class="price">₹ 600</span>
+                        </div>
+                        <p class="menu-desc">Cajun-spiced fish, fried crisp and golden with a juicy, flaky center.</p>
+                    </div>
+                </div>
+                <div class="menu-item" data-category="non-vegetarian">
+                    <div class="menu-details">
+                        <div class="menu-title-price">
+                            <h3>Murgh Banjara Kebab <span class="dietary-symbols">🔴</span></h3>
+                            <span class="price">₹ 525</span>
+                        </div>
+                        <p class="menu-desc">Marinated chicken with yogurt, ginger-garlic, spices, and herbs,
+                            chargrilled in a tandoori pot.</p>
+                    </div>
+                </div>
+                <div class="menu-item" data-category="non-vegetarian">
+                    <div class="menu-details">
+                        <div class="menu-title-price">
+                            <h3>Crispy Wing Pops up <span class="dietary-symbols">🔴</span></h3>
+                            <span class="price">₹ 525</span>
+                        </div>
+                        <p class="menu-desc">An Indo-Chinese mix of spices, soy, ginger, and garlic, served with spicy
+                            chili-garlic and sweet chilli sauce.</p>
+                    </div>
+                </div>
+                <div class="menu-item" data-category="non-vegetarian">
+                    <div class="menu-details">
+                        <div class="menu-title-price">
+                            <h3>Chettinad Chicken Roast <span class="dietary-symbols">🔴</span></h3>
+                            <span class="price">₹ 525</span>
+                        </div>
+                        <p class="menu-desc">Slow-cooked chicken in roasted spices, black pepper, curry leaves, and
+                            coconut.</p>
+                    </div>
+                </div>
+                <div class="menu-item" data-category="non-vegetarian">
+                    <div class="menu-details">
+                        <div class="menu-title-price">
+                            <h3>Korean Crispy Chilli Chicken <span class="dietary-symbols">🔴</span></h3>
+                            <span class="price">₹ 525</span>
+                        </div>
+                        <p class="menu-desc">Crispy battered chicken tossed in a sweet, spicy, and tangy Korean chili
+                            sauce.</p>
+                    </div>
+                </div>
+                <div class="menu-item" data-category="non-vegetarian">
+                    <div class="menu-details">
+                        <div class="menu-title-price">
+                            <h3>Iranian Joojeh Kabab <span class="dietary-symbols">🔴</span></h3>
+                            <span class="price">₹ 525</span>
+                        </div>
+                        <p class="menu-desc">Saffron-marinated chicken with yogurt, cheese, cream, and mild spices,
+                            cooked in a tandoori pot.</p>
+                    </div>
+                </div>
+
+                <!-- NON-VEG GALORE -->
+                <!-- Taste of the west -->
+                <div class="menu-section-divider" data-category="taste-west">
+                    <h3><strong>TASTE OF THE WEST</strong></h3>
+                </div>
+
+                <div class="menu-item" data-category="taste-west">
+                    <div class="menu-details">
+                        <div class="menu-title-price">
+                            <h3>Wild-west Grilled Chicken <span class="dietary-symbols">🔴</span></h3>
+                            <span class="price">₹ 750</span>
+                        </div>
+                        <p class="menu-desc">Herb-seasoned chicken breast served with a creamy mushroom velouté.</p>
+                    </div>
+                </div>
+                <div class="menu-item" data-category="taste-west">
+                    <div class="menu-details">
+                        <div class="menu-title-price">
+                            <h3>Chicken Parmigiana <span class="dietary-symbols">🔴</span></h3>
+                            <span class="price">₹ 700</span>
+                        </div>
+                        <p class="menu-desc">Breaded chicken cutlets topped with tomato sauce and melted cheese.</p>
+                    </div>
+                </div>
+                <div class="menu-item" data-category="taste-west">
+                    <div class="menu-details">
+                        <div class="menu-title-price">
+                            <h3>Smoke kissed Chicken à la Grecque <span class="dietary-symbols">🔴</span></h3>
+                            <span class="price">₹ 700</span>
+                        </div>
+                        <p class="menu-desc">Tender grilled chicken with bright, aromatic Mediterranean and Greek
+                            flavors.</p>
+                    </div>
+                </div>
+                <div class="menu-item" data-category="taste-west">
+                    <div class="menu-details">
+                        <div class="menu-title-price">
+                            <h3>Lemon-Dijon Crusted Fish <span class="dietary-symbols">🔴</span></h3>
+                            <span class="price">₹ 650</span>
+                        </div>
+                        <p class="menu-desc">A zesty citrus dish enhanced by the smooth, sharp notes of Dijon mustard.
+                        </p>
+                    </div>
+                </div>
+                <div class="menu-item" data-category="taste-west">
+                    <div class="menu-details">
+                        <div class="menu-title-price">
+                            <h3>Creole-Spiced Blackened Fish <span class="dietary-symbols">🔴</span></h3>
+                            <span class="price">₹ 650</span>
+                        </div>
+                        <p class="menu-desc">Flaky fish fillets seasoned with a bold Creole blend of paprika, cayenne,
+                            garlic, onion, and herbs.</p>
+                    </div>
+                </div>
+
+                <!-- FARM-TO-TABLE MAINS -->
+
+                <!-- FARM-TO-TABLE MAINS -->
+                <div class="menu-section-divider" data-category="farm-table">
+                    <h3><strong>FARM-TO-TABLE MAINS</strong></h3>
+                </div>
+
+                <div class="menu-item" data-category="farm-table">
+                    <div class="menu-details">
+                        <div class="menu-title-price">
+                            <h3>Palak Dal / Aloo / Paneer <span class="dietary-symbols">🌱</span></h3>
+                            <span class="price">₹ 350 / 350 / 450</span>
+                        </div>
+                        <p class="menu-desc">Creamy spinach curry, delicately seasoned with garam masala, kasuri methi,
+                            and aromatic spices with options.</p>
+                    </div>
+                </div>
+                <div class="menu-item" data-category="farm-table">
+                    <div class="menu-details">
+                        <div class="menu-title-price">
+                            <h3>Nawabi Tarkari <span class="dietary-symbols">🌱</span></h3>
+                            <span class="price">₹ 350</span>
+                        </div>
+                        <p class="menu-desc">Mixed vegetables gently simmered in a rich, velvety gravy.</p>
+                    </div>
+                </div>
+                <div class="menu-item" data-category="farm-table">
+                    <div class="menu-details">
+                        <div class="menu-title-price">
+                            <h3>Kadai Vegetables / Paneer <span class="dietary-symbols">🌱</span></h3>
+                            <span class="price">₹ 350 / 450</span>
+                        </div>
+                        <p class="menu-desc">A bold, semi-dry masala preparation with tender vegetables or paneer.</p>
+                    </div>
+                </div>
+                <div class="menu-item" data-category="farm-table">
+                    <div class="menu-details">
+                        <div class="menu-title-price">
+                            <h3>Desi Fusion Bites <span class="dietary-symbols">🌱</span></h3>
+                            <span class="price">₹ 450 / 350 / 300</span>
+                        </div>
+                        <p class="menu-desc">Indo-sino Paneer/ mushroom / cauliflower.</p>
+                    </div>
+                </div>
+                <div class="menu-item" data-category="farm-table">
+                    <div class="menu-details">
+                        <div class="menu-title-price">
+                            <h3>Dal Amritsari <span class="dietary-symbols">🌱</span></h3>
+                            <span class="price">₹ 350</span>
+                        </div>
+                        <p class="menu-desc">Slow-cooked urad and chana dal infused with spices, tomatoes, ginger, and
+                            garlic.</p>
+                    </div>
+                </div>
+                <div class="menu-item" data-category="farm-table">
+                    <div class="menu-details">
+                        <div class="menu-title-price">
+                            <h3>Tovar Ka Dal <span class="dietary-symbols">🌱</span></h3>
+                            <span class="price">₹ 300</span>
+                        </div>
+                        <p class="menu-desc">Creamy pigeon pea dal tempered with cumin, garlic, turmeric, and red chili.
+                        </p>
+                    </div>
+                </div>
+                <div class="menu-item" data-category="farm-table">
+                    <div class="menu-details">
+                        <div class="menu-title-price">
+                            <h3>Choice of Noodles (Veg / Egg / Non Veg)</h3>
+                        </div>
+                        <div style="margin-top: 0.3rem;">
+                            <span class="price" style="font-size: 1.35rem; white-space: nowrap; font-weight: 700; color: #2e7d32;"><span class="dietary-symbols">🌱</span> ₹ 300 / <span class="dietary-symbols">🥚</span> ₹ 350 / <span class="dietary-symbols">🔴</span> ₹ 400</span>
+                        </div>
+                        <p class="menu-desc">Choose from Hakka / Butter Garlic / Schewan / Singapore.</p>
+                    </div>
+                </div>
+                <div class="menu-item" data-category="farm-table">
+                    <div class="menu-details">
+                        <div class="menu-title-price">
+                            <h3>Choice of Fried Rice (Veg / Egg / Non Veg)</h3>
+                        </div>
+                        <div style="margin-top: 0.3rem;">
+                            <span class="price" style="font-size: 1rem; white-space: nowrap;"><span class="dietary-symbols">🌱</span> ₹ 300 / <span class="dietary-symbols">🥚</span> ₹ 350 / <span class="dietary-symbols">🔴</span> ₹ 400</span>
+                        </div>
+                        <p class="menu-desc">Choose from Hakka / Schezwan / Chilli Garlic.</p>
+                    </div>
+                </div>
+                <div class="menu-item" data-category="farm-table">
+                    <div class="menu-details">
+                        <div class="menu-title-price">
+                            <h3>Choice of Pan Seared Biryani (Veg / Egg / Non Veg)</h3>
+                        </div>
+                        <div style="margin-top: 0.3rem;">
+                            <span class="price" style="white-space: nowrap;"><span class="dietary-symbols">🌱</span> ₹ 400 / <span class="dietary-symbols">🥚</span> ₹ 550 / <span class="dietary-symbols">🔴</span> ₹ 750</span>
+                        </div>
+                        <p class="menu-desc">Vegetables / Chicken / Mutton.</p>
+                    </div>
+                </div>
+                <div class="menu-item" data-category="farm-table">
+                    <div class="menu-details">
+                        <div class="menu-title-price">
+                            <h3>Choice of Pulao <span class="dietary-symbols">🌱</span></h3>
+                            <span class="price">₹ 300</span>
+                        </div>
+                        <p class="menu-desc">Peas / Veg / Jeera.</p>
+                    </div>
+                </div>
+                <div class="menu-item" data-category="farm-table">
+                    <div class="menu-details">
+                        <div class="menu-title-price">
+                            <h3>Steamed Rice <span class="dietary-symbols">🌱</span></h3>
+                            <span class="price">₹ 200</span>
+                        </div>
+                        <p class="menu-desc">Freshly steamed white rice.</p>
+                    </div>
+                </div>
+                <div class="menu-item" data-category="farm-table">
+                    <div class="menu-details">
+                        <div class="menu-title-price">
+                            <h3>Choice of Indian breads 🌱</h3>
+                            <span class="price">₹ 120</span>
+                        </div>
+                        <p class="menu-desc">Kulcha / Roti / Naan / Paratha/ Phulka / Chapathi.</p>
+                    </div>
+                </div>
+                <div class="menu-item" data-category="farm-table">
+                    <div class="menu-details">
+                        <div class="menu-title-price">
+                            <h3>Curd Rice <span class="dietary-symbols">🌱</span></h3>
+                            <span class="price">₹ 250</span>
+                        </div>
+                        <p class="menu-desc">Creamy curd rice tempered with mustard seeds and curry leaves.</p>
+                    </div>
+                </div>
+                <!-- Comfort in a Bowl -->
+
+                <!-- NON-VEG GALORE -->
+                <div class="menu-section-divider" data-category="non-veg-galore">
+                    <h3><strong>NON-VEG GALORE</strong></h3>
+                </div>
+
+                <div class="menu-item" data-category="non-veg-galore">
+                    <div class="menu-details">
+                        <div class="menu-title-price">
+                            <h3>Oriental Wok Prawn Teriyaki/ Curried / Chilli Garlic <span class="dietary-symbols">🔴
+                                    🦐</span></h3>
+                            <span class="price">₹ 800</span>
+                        </div>
+                        <p class="menu-desc">Wok-tossed veggies with garlic, ginger, and a tangy-sweet signature sauce.
+                        </p>
+                    </div>
+                </div>
+                <div class="menu-item" data-category="non-veg-galore">
+                    <div class="menu-details">
+                        <div class="menu-title-price">
+                            <h3>Southern Spice Mutton <span class="dietary-symbols">🔴</span></h3>
+                            <span class="price">₹ 750</span>
+                        </div>
+                        <p class="menu-desc">A rich Chettinad-style curry infused with bold spices, curry leaves and
+                            black pepper.</p>
+                    </div>
+                </div>
+                <div class="menu-item" data-category="non-veg-galore">
+                    <div class="menu-details">
+                        <div class="menu-title-price">
+                            <h3>Fish Curry - Madras / Kerala / Goan <span class="dietary-symbols">🔴 🐟</span></h3>
+                            <span class="price">₹ 650</span>
+                        </div>
+                        <p class="menu-desc">Coastal-style fish curry. Available in Madras, Kerala, or Goan styles.</p>
+                    </div>
+                </div>
+                <div class="menu-item" data-category="non-veg-galore">
+                    <div class="menu-details">
+                        <div class="menu-title-price">
+                            <h3>Rajasthani Handi Murgh Masala <span class="dietary-symbols">🔴</span></h3>
+                            <span class="price">₹ 525</span>
+                        </div>
+                        <p class="menu-desc">Slow-cooked chicken in a rich yogurt, onion, and tomato gravy.</p>
+                    </div>
+                </div>
+                <div class="menu-item" data-category="non-veg-galore">
+                    <div class="menu-details">
+                        <div class="menu-title-price">
+                            <h3>Kozhi Varutha Curry <span class="dietary-symbols">🔴</span></h3>
+                            <span class="price">₹ 525</span>
+                        </div>
+                        <p class="menu-desc">Chicken cooked in a spicy roasted coconut masala with curry leaves and red
+                            chilies.</p>
+                    </div>
+                </div>
+                <div class="menu-item" data-category="non-veg-galore">
+                    <div class="menu-details">
+                        <div class="menu-title-price">
+                            <h3>Kadai Masala Murgh <span class="dietary-symbols">🔴</span></h3>
+                            <span class="price">₹ 525</span>
+                        </div>
+                        <p class="menu-desc">Kadai-style chicken sautéed with peppers, onions, and freshly ground
+                            spices.</p>
+                    </div>
+                </div>
+                <div class="menu-item" data-category="non-veg-galore">
+                    <div class="menu-details">
+                        <div class="menu-title-price">
+                            <h3>Chef's Chettinad Delight <span class="dietary-symbols">🔴</span></h3>
+                            <span class="price">₹ 525</span>
+                        </div>
+                        <p class="menu-desc">Chicken cooked in a fiery Chettinad-style masala with roasted spices and
+                            herbs.</p>
+                    </div>
+                </div>
+                <div class="menu-item" data-category="non-veg-galore">
+                    <div class="menu-details">
+                        <div class="menu-title-price">
+                            <h3>Pick your Pasta <span class="dietary-symbols">🌱 🔴 🐟</span></h3>
+                            <span class="price">₹ 450 / 550 / 650</span>
+                        </div>
+                        <p class="menu-desc">Penne/ Farfelle/ Whole Wheat Penne. Arrabbiata/ White Sauce/ Pesto.</p>
+                    </div>
+                </div>
+
+                <!-- Sugar Symphony -->
+
+                <!-- Sugar Symphony -->
+                <div class="menu-section-divider" data-category="sugar-symphony">
+                    <h3><strong>SUGAR SYMPHONY</strong></h3>
+                </div>
+
+                <div class="menu-item" data-category="sugar-symphony">
+                    <div class="menu-details">
+                        <div class="menu-title-price">
+                            <h3>Fudgy Chocolate Square <span class="dietary-symbols">🔴</span></h3>
+                            <span class="price">₹ 450</span>
+                        </div>
+                        <p class="menu-desc">Dense, moist chocolate brownie with a velvety texture served with a scoop
+                            of vanilla Ice-Cream.</p>
+                    </div>
+                </div>
+                <div class="menu-item" data-category="sugar-symphony">
+                    <div class="menu-details">
+                        <div class="menu-title-price">
+                            <h3>Warm Sticky Fig & Dates <span class="dietary-symbols">🔴</span> Pudding</h3>
+                            <span class="price">₹ 450</span>
+                        </div>
+                        <p class="menu-desc">Rich, moist sponge from figs and dates drizzled with caramel or
+                            butterscotch sauce.</p>
+                    </div>
+                </div>
+                <div class="menu-item" data-category="sugar-symphony">
+                    <div class="menu-details">
+                        <div class="menu-title-price">
+                            <h3>Creamie Caramel Delight <span class="dietary-symbols">🔴</span></h3>
+                            <span class="price">₹ 350</span>
+                        </div>
+                        <p class="menu-desc">Smooth, creamy custard base topped with a golden layer of rich caramel.</p>
+                    </div>
+                </div>
+                <div class="menu-item" data-category="sugar-symphony">
+                    <div class="menu-details">
+                        <div class="menu-title-price">
+                            <h3>Silken Chocolate Mousse <span class="dietary-symbols">🌱</span></h3>
+                            <span class="price">₹ 350</span>
+                        </div>
+                        <p class="menu-desc">A airy dessert made with rich dark chocolate, whipped to a silky smooth
+                            texture.</p>
+                    </div>
+                </div>
+                <div class="menu-item" data-category="sugar-symphony">
+                    <div class="menu-details">
+                        <div class="menu-title-price">
+                            <h3>Gajar Ka Halwa <span class="dietary-symbols">🌱</span></h3>
+                            <span class="price">₹ 300</span>
+                        </div>
+                        <p class="menu-desc">Grated carrots slow-cooked in milk, ghee, and sugar, infused with cardamom
+                            and nuts.</p>
+                    </div>
+                </div>
+                <div class="menu-item" data-category="sugar-symphony">
+                    <div class="menu-details">
+                        <div class="menu-title-price">
+                            <h3>Gulab Jamun <span class="dietary-symbols">🌱</span></h3>
+                            <span class="price">₹ 250</span>
+                        </div>
+                        <p class="menu-desc">soft, golden dumplings made from milk solids, deep-fried to perfection, and
+                            soaked in fragrant sugar syrup.</p>
+                    </div>
+                </div>
+                <div class="menu-item" data-category="sugar-symphony">
+                    <div class="menu-details">
+                        <div class="menu-title-price">
+                            <h3>ICE CREAM <span class="dietary-symbols">🌱</span></h3>
+                            <span class="price">₹ 250</span>
+                        </div>
+                        <p class="menu-desc">Vanilla / Strawberry / Chocolate / Butterscotch / Mango.</p>
+                    </div>
+                </div>
+
+                <!-- EVENING & LATE NIGHT BITES -->
+
+                <!-- EVENING & LATE NIGHT BITES -->
+                <div class="menu-section-divider" data-category="late-night">
+                    <h3><strong>EVENING & LATE NIGHT BITES</strong></h3>
+                </div>
+
+                <div class="menu-item" data-category="late-night">
+                    <div class="menu-details">
+                        <div class="menu-title-price">
+                            <h3>Pick your Sandwich (Veg / Chicken) <span class="dietary-symbols">🌱 🔴</span></h3>
+                            <span class="price">₹ 350 / 450</span>
+                        </div>
+                        <p class="menu-desc">Plain, Toast or Grilled.</p>
+                    </div>
+                </div>
+                <div class="menu-item" data-category="late-night">
+                    <div class="menu-details">
+                        <div class="menu-title-price">
+                            <h3>Chilly Cheese Toast <span class="dietary-symbols">🔴</span></h3>
+                            <span class="price">₹ 300</span>
+                        </div>
+                        <p class="menu-desc">Crispy bread topped with spicy cheese and chili melt.</p>
+                    </div>
+                </div>
+                <div class="menu-item" data-category="late-night">
+                    <div class="menu-details">
+                        <div class="menu-title-price">
+                            <h3>Mixed Veg Pakoda <span class="dietary-symbols">🌱</span></h3>
+                            <span class="price">₹ 200</span>
+                        </div>
+                        <p class="menu-desc">Assorted vegetables dipped in spiced gram flour batter and deep-fried.</p>
+                    </div>
+                </div>
+                <div class="menu-item" data-category="late-night">
+                    <div class="menu-details">
+                        <div class="menu-title-price">
+                            <h3>Peri Peri French Fries 🌱</h3>
+                            <span class="price">₹ 150</span>
+                        </div>
+                        <p class="menu-desc">Crispy golden fries tossed in bold peri peri seasoning.</p>
+                    </div>
+                </div>
+
+                <!-- Beverages -->
+
+                <!-- Beverages -->
+                <!-- Back to Categories -->
+                <div class="back-to-categories-wrap">
+                    <a class="back-to-categories" id="back-to-categories-btn">
+                        <span>↑</span> Back to Menu Categories
+                    </a>
+                </div>
+            </div>
+            </div>
+
+            <!-- ROOM SERVICE OUTLET -->
+            <div class="outlet-content" id="outlet-room-service">
+                
+            <!-- Room Service categories -->
+            <div class="menu-categories">
+                <button class="menu-tab active" data-category="all">All</button>
+                <button class="menu-tab" data-category="rs-soups">Soups & Salads</button>
+                <button class="menu-tab" data-category="rs-starters">Snacks & Starters</button>
+                <button class="menu-tab" data-category="rs-mains">Main Course</button>
+                <button class="menu-tab" data-category="rs-desserts">Desserts</button>
+                <button class="menu-tab" data-category="rs-beverages">Beverages</button>
+            </div>
+
+            <div class="menu-grid">
+                <!-- Soups & Salads Section -->
+                <div class="menu-section-divider" data-category="rs-soups">
+                    <h3><strong>SOUPS & SALADS</strong></h3>
+                </div>
+                <div class="menu-item" data-category="rs-soups">
+                    <div class="menu-details">
+                        <div class="menu-title-price">
+                            <h3>Classic Tuscan Tomato Soup <span class="dietary-symbols">🌱</span></h3>
+                            <span class="price">₹ 225</span>
+                        </div>
+                        <p class="menu-desc">Rich, velvety tomato and herb blend, topped with Genovese basil.</p>
+                    </div>
+                </div>
+<div class="menu-item" data-category="rs-soups">
+                    <div class="menu-details">
+                        <div class="menu-title-price">
+                            <h3>Classic Caesar's Salad <span class="dietary-symbols">🌱 🔴</span></h3>
+                            <span class="price">₹ 300 / 350</span>
+                        </div>
+                        <p class="menu-desc">Crisp romaine in a creamy Caesar dressing, finished with Parmesan and
+                            garlic croutons.</p>
+                    </div>
+                </div>
+<div class="menu-item" data-category="rs-soups">
+                    <div class="menu-details">
+                        <div class="menu-title-price">
+                            <h3>Tex-Mex Salad <span class="dietary-symbols">🌱 🔴</span></h3>
+                            <span class="price">₹ 300 / 350</span>
+                        </div>
+                        <p class="menu-desc">Crisp greens, tomatoes, corn, black beans, and tortilla strips, all tossed
+                            in a chili-lime dressing — pure fiesta.</p>
+                    </div>
+                </div>
+
+                <!-- Snacks & Starters Section -->
+                <div class="menu-section-divider" data-category="rs-starters">
+                    <h3><strong>SNACKS & STARTERS</strong></h3>
+                </div>
+                <div class="menu-item" data-category="rs-starters">
+                    <div class="menu-details">
+                        <div class="menu-title-price">
+                            <h3>Honey-Drizzled Crispy Corn <span class="dietary-symbols">🌱</span></h3>
+                            <span class="price">₹ 450</span>
+                        </div>
+                        <p class="menu-desc">Brittle golden baby corn tossed in a sweet and mildly spicy honey-chili
+                            glaze.</p>
+                    </div>
+                </div>
+<div class="menu-item" data-category="rs-starters">
+                    <div class="menu-details">
+                        <div class="menu-title-price">
+                            <h3>Wok-Fried Chili Cauliflower <span class="dietary-symbols">🌱</span></h3>
+                            <span class="price">₹ 450</span>
+                        </div>
+                        <p class="menu-desc">Crispy cauliflower tossed in a bold, tangy chili-garlic sauce with bell
+                            peppers, spring onions, and spices.</p>
+                    </div>
+                </div>
+<div class="menu-item" data-category="rs-starters">
+                    <div class="menu-details">
+                        <div class="menu-title-price">
+                            <h3>Murgh Banjara Kebab <span class="dietary-symbols">🔴</span></h3>
+                            <span class="price">₹ 525</span>
+                        </div>
+                        <p class="menu-desc">Marinated chicken with yogurt, ginger-garlic, spices, and herbs,
+                            chargrilled in a tandoori pot.</p>
+                    </div>
+                </div>
+<div class="menu-item" data-category="rs-starters">
+                    <div class="menu-details">
+                        <div class="menu-title-price">
+                            <h3>Korean Crispy Chilli Chicken <span class="dietary-symbols">🔴</span></h3>
+                            <span class="price">₹ 525</span>
+                        </div>
+                        <p class="menu-desc">Crispy battered chicken tossed in a sweet, spicy, and tangy Korean chili
+                            sauce.</p>
+                    </div>
+                </div>
+<div class="menu-item" data-category="rs-starters">
+                    <div class="menu-details">
+                        <div class="menu-title-price">
+                            <h3>Pick your Sandwich (Veg / Chicken) <span class="dietary-symbols">🌱 🔴</span></h3>
+                            <span class="price">₹ 350 / 450</span>
+                        </div>
+                        <p class="menu-desc">Plain, Toast or Grilled.</p>
+                    </div>
+                </div>
+<div class="menu-item" data-category="rs-starters">
+                    <div class="menu-details">
+                        <div class="menu-title-price">
+                            <h3>Chilly Cheese Toast <span class="dietary-symbols">🔴</span></h3>
+                            <span class="price">₹ 300</span>
+                        </div>
+                        <p class="menu-desc">Crispy bread topped with spicy cheese and chili melt.</p>
+                    </div>
+                </div>
+<div class="menu-item" data-category="rs-starters">
+                    <div class="menu-details">
+                        <div class="menu-title-price">
+                            <h3>Peri Peri French Fries 🌱</h3>
+                            <span class="price">₹ 150</span>
+                        </div>
+                        <p class="menu-desc">Crispy golden fries tossed in bold peri peri seasoning.</p>
+                    </div>
+                </div>
+
+                <!-- Main Course Section -->
+                <div class="menu-section-divider" data-category="rs-mains">
+                    <h3><strong>MAIN COURSE</strong></h3>
+                </div>
+                <div class="menu-item" data-category="rs-mains">
+                    <div class="menu-details">
+                        <div class="menu-title-price">
+                            <h3>Tovar Ka Dal <span class="dietary-symbols">🌱</span></h3>
+                            <span class="price">₹ 300</span>
+                        </div>
+                        <p class="menu-desc">Creamy pigeon pea dal tempered with cumin, garlic, turmeric, and red chili.
+                        </p>
+                    </div>
+                </div>
+<div class="menu-item" data-category="rs-mains">
+                    <div class="menu-details">
+                        <div class="menu-title-price">
+                            <h3>Choice of Noodles (Veg / Egg / Non Veg)</h3>
+                        </div>
+                        <div style="margin-top: 0.3rem;">
+                            <span class="price" style="font-size: 1.35rem; white-space: nowrap; font-weight: 700; color: #2e7d32;"><span class="dietary-symbols">🌱</span> ₹ 300 / <span class="dietary-symbols">🥚</span> ₹ 350 / <span class="dietary-symbols">🔴</span> ₹ 400</span>
+                        </div>
+                        <p class="menu-desc">Choose from Hakka / Butter Garlic / Schewan / Singapore.</p>
+                    </div>
+                </div>
+<div class="menu-item" data-category="rs-mains">
+                    <div class="menu-details">
+                        <div class="menu-title-price">
+                            <h3>Choice of Fried Rice (Veg / Egg / Non Veg)</h3>
+                        </div>
+                        <div style="margin-top: 0.3rem;">
+                            <span class="price" style="font-size: 1rem; white-space: nowrap;"><span class="dietary-symbols">🌱</span> ₹ 300 / <span class="dietary-symbols">🥚</span> ₹ 350 / <span class="dietary-symbols">🔴</span> ₹ 400</span>
+                        </div>
+                        <p class="menu-desc">Choose from Hakka / Schezwan / Chilli Garlic.</p>
+                    </div>
+                </div>
+<div class="menu-item" data-category="rs-mains">
+                    <div class="menu-details">
+                        <div class="menu-title-price">
+                            <h3>Choice of Pan Seared Biryani (Veg / Egg / Non Veg)</h3>
+                        </div>
+                        <div style="margin-top: 0.3rem;">
+                            <span class="price" style="white-space: nowrap;"><span class="dietary-symbols">🌱</span> ₹ 400 / <span class="dietary-symbols">🥚</span> ₹ 550 / <span class="dietary-symbols">🔴</span> ₹ 750</span>
+                        </div>
+                        <p class="menu-desc">Vegetables / Chicken / Mutton.</p>
+                    </div>
+                </div>
+<div class="menu-item" data-category="rs-mains">
+                    <div class="menu-details">
+                        <div class="menu-title-price">
+                            <h3>Steamed Rice <span class="dietary-symbols">🌱</span></h3>
+                            <span class="price">₹ 200</span>
+                        </div>
+                        <p class="menu-desc">Freshly steamed white rice.</p>
+                    </div>
+                </div>
+<div class="menu-item" data-category="rs-mains">
+                    <div class="menu-details">
+                        <div class="menu-title-price">
+                            <h3>Choice of Indian breads 🌱</h3>
+                            <span class="price">₹ 120</span>
+                        </div>
+                        <p class="menu-desc">Kulcha / Roti / Naan / Paratha/ Phulka / Chapathi.</p>
+                    </div>
+                </div>
+<div class="menu-item" data-category="rs-mains">
+                    <div class="menu-details">
+                        <div class="menu-title-price">
+                            <h3>Rajasthani Handi Murgh Masala <span class="dietary-symbols">🔴</span></h3>
+                            <span class="price">₹ 525</span>
+                        </div>
+                        <p class="menu-desc">Slow-cooked chicken in a rich yogurt, onion, and tomato gravy.</p>
+                    </div>
+                </div>
+<div class="menu-item" data-category="rs-mains">
+                    <div class="menu-details">
+                        <div class="menu-title-price">
+                            <h3>Fish Curry - Madras / Kerala / Goan <span class="dietary-symbols">🔴 🐟</span></h3>
+                            <span class="price">₹ 650</span>
+                        </div>
+                        <p class="menu-desc">Coastal-style fish curry. Available in Madras, Kerala, or Goan styles.</p>
+                    </div>
+                </div>
+
+                <!-- Desserts Section -->
+                <div class="menu-section-divider" data-category="rs-desserts">
+                    <h3><strong>DESSERTS</strong></h3>
+                </div>
+                <div class="menu-item" data-category="rs-desserts">
+                    <div class="menu-details">
+                        <div class="menu-title-price">
+                            <h3>Fudgy Chocolate Square <span class="dietary-symbols">🔴</span></h3>
+                            <span class="price">₹ 450</span>
+                        </div>
+                        <p class="menu-desc">Dense, moist chocolate brownie with a velvety texture served with a scoop
+                            of vanilla Ice-Cream.</p>
+                    </div>
+                </div>
+<div class="menu-item" data-category="rs-desserts">
+                    <div class="menu-details">
+                        <div class="menu-title-price">
+                            <h3>Gulab Jamun <span class="dietary-symbols">🌱</span></h3>
+                            <span class="price">₹ 250</span>
+                        </div>
+                        <p class="menu-desc">soft, golden dumplings made from milk solids, deep-fried to perfection, and
+                            soaked in fragrant sugar syrup.</p>
+                    </div>
+                </div>
+<div class="menu-item" data-category="rs-desserts">
+                    <div class="menu-details">
+                        <div class="menu-title-price">
+                            <h3>ICE CREAM <span class="dietary-symbols">🌱</span></h3>
+                            <span class="price">₹ 250</span>
+                        </div>
+                        <p class="menu-desc">Vanilla / Strawberry / Chocolate / Butterscotch / Mango.</p>
+                    </div>
+                </div>
+
+                <!-- Beverages Section -->
+                <div class="menu-section-divider" data-category="rs-beverages">
+                    <h3><strong>BEVERAGES</strong></h3>
+                </div>
+                <div class="menu-item" data-category="rs-beverages">
+                    <div class="menu-details">
+                        <div class="menu-title-price">
+                            <h3>Choice of Fresh Juices</h3>
+                            <span class="price">₹ 150</span>
+                        </div>
+                        <p class="menu-desc">(Seasonal Fruits subjected to availability).</p>
+                    </div>
+                </div>
+<div class="menu-item" data-category="rs-beverages">
+                    <div class="menu-details">
+                        <div class="menu-title-price">
+                            <h3>Coffee</h3>
+                            <span class="price">₹ 150</span>
+                        </div>
+                        <p class="menu-desc">Freshly brewed coffee.</p>
+                    </div>
+                </div>
+<div class="menu-item" data-category="rs-beverages">
+                    <div class="menu-details">
+                        <div class="menu-title-price">
+                            <h3>Tea</h3>
+                            <span class="price">₹ 150</span>
+                        </div>
+                        <p class="menu-desc">(Assam / Green / English Breakfast / Regular / Masala Tea).</p>
+                    </div>
+                </div>
+<div class="menu-item" data-category="rs-beverages">
+                    <div class="menu-details">
+                        <div class="menu-title-price">
+                            <h3>Choice of Fresh Lime</h3>
+                            <span class="price">₹ 125</span>
+                        </div>
+                        <p class="menu-desc">Soda / Water.</p>
+                    </div>
+                </div>
+<div class="menu-item" data-category="rs-beverages">
+                    <div class="menu-details">
+                        <div class="menu-title-price">
+                            <h3>Aerated Beverages</h3>
+                            <span class="price">₹ 100</span>
+                        </div>
+                        <p class="menu-desc">Selected carbonated drinks.</p>
+                    </div>
+                </div>
+<div class="menu-item" data-category="rs-beverages">
+                    <div class="menu-details">
+                        <div class="menu-title-price">
+                            <h3>Packaged Drinking Water</h3>
+                            <span class="price">₹ 20</span>
+                        </div>
+                        <p class="menu-desc">Stay hydrated with our purified bottled water.</p>
+                    </div>
+                </div>
+
+                <!-- Back to Categories -->
+                <div class="back-to-categories-wrap">
+                    <a class="back-to-categories" id="back-to-categories-btn-rs">
+                        <span>↑</span> Back to Menu Categories
+                    </a>
+                </div>
+            </div>
+
+            </div>
+
+            <!-- BEVERAGE OUTLET -->
+            <div class="outlet-content" id="outlet-beverage">
+                
+            <!-- Beverage categories -->
+            <div class="menu-categories">
+                <button class="menu-tab active" data-category="all">All</button>
+                <button class="menu-tab" data-category="bev-juices">Juices & Shakes</button>
+                <button class="menu-tab" data-category="bev-hot">Hot Brews</button>
+                <button class="menu-tab" data-category="bev-refreshers">Refreshers & Mocktails</button>
+            </div>
+
+            <div class="menu-grid">
+                <!-- Juices & Shakes Section -->
+                <div class="menu-section-divider" data-category="bev-juices">
+                    <h3><strong>JUICES & SHAKES</strong></h3>
+                </div>
+                <div class="menu-item" data-category="bev-juices">
+                    <div class="menu-details">
+                        <div class="menu-title-price">
+                            <h3>Choice of Fresh Juices</h3>
+                            <span class="price">₹ 150</span>
+                        </div>
+                        <p class="menu-desc">(Seasonal Fruits subjected to availability).</p>
+                    </div>
+                </div>
+<div class="menu-item" data-category="bev-juices">
+                    <div class="menu-details">
+                        <div class="menu-title-price">
+                            <h3>Choice of Milkshakes & Lassi</h3>
+                            <span class="price">₹ 150</span>
+                        </div>
+                        <p class="menu-desc">Chocolate / Vanilla / Strawberry.</p>
+                    </div>
+                </div>
+
+                <!-- Hot Brews Section -->
+                <div class="menu-section-divider" data-category="bev-hot">
+                    <h3><strong>HOT BREWS</strong></h3>
+                </div>
+                <div class="menu-item" data-category="bev-hot">
+                    <div class="menu-details">
+                        <div class="menu-title-price">
+                            <h3>Coffee</h3>
+                            <span class="price">₹ 150</span>
+                        </div>
+                        <p class="menu-desc">Freshly brewed coffee.</p>
+                    </div>
+                </div>
+<div class="menu-item" data-category="bev-hot">
+                    <div class="menu-details">
+                        <div class="menu-title-price">
+                            <h3>Tea</h3>
+                            <span class="price">₹ 150</span>
+                        </div>
+                        <p class="menu-desc">(Assam / Green / English Breakfast / Regular / Masala Tea).</p>
+                    </div>
+                </div>
+
+                <!-- Refreshers & Mocktails Section -->
+                <div class="menu-section-divider" data-category="bev-refreshers">
+                    <h3><strong>REFRESHERS & MOCKTAILS</strong></h3>
+                </div>
+                
+                <div class="menu-item" data-category="bev-refreshers">
+                    <div class="menu-details">
+                        <div class="menu-title-price">
+                            <h3>Signature Mint Mojito <span class="dietary-symbols">🌱</span></h3>
+                            <span class="price">₹ 180</span>
+                        </div>
+                        <p class="menu-desc">Refreshing blend of fresh mint leaves, lime juice, brown sugar, and sparkling soda.</p>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-category="bev-refreshers">
+                    <div class="menu-details">
+                        <div class="menu-title-price">
+                            <h3>Iced Peach Tea <span class="dietary-symbols">🌱</span></h3>
+                            <span class="price">₹ 160</span>
+                        </div>
+                        <p class="menu-desc">Chilled black tea infused with aromatic peach nectar and fresh mint garnish.</p>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-category="bev-refreshers">
+                    <div class="menu-details">
+                        <div class="menu-title-price">
+                            <h3>Fresh Tender Coconut Water <span class="dietary-symbols">🌱</span></h3>
+                            <span class="price">₹ 100</span>
+                        </div>
+                        <p class="menu-desc">Pure, natural and chilled tender coconut water, straight from local farms.</p>
+                    </div>
+                </div>
+                <div class="menu-item" data-category="bev-refreshers">
+                    <div class="menu-details">
+                        <div class="menu-title-price">
+                            <h3>Choice of Fresh Lime</h3>
+                            <span class="price">₹ 125</span>
+                        </div>
+                        <p class="menu-desc">Soda / Water.</p>
+                    </div>
+                </div>
+<div class="menu-item" data-category="bev-refreshers">
+                    <div class="menu-details">
+                        <div class="menu-title-price">
+                            <h3>Aerated Beverages</h3>
+                            <span class="price">₹ 100</span>
+                        </div>
+                        <p class="menu-desc">Selected carbonated drinks.</p>
+                    </div>
+                </div>
+<div class="menu-item" data-category="bev-refreshers">
+                    <div class="menu-details">
+                        <div class="menu-title-price">
+                            <h3>Packaged Drinking Water</h3>
+                            <span class="price">₹ 20</span>
+                        </div>
+                        <p class="menu-desc">Stay hydrated with our purified bottled water.</p>
+                    </div>
+                </div>
+
+                <!-- Back to Categories -->
+                <div class="back-to-categories-wrap">
+                    <a class="back-to-categories" id="back-to-categories-btn-bev">
+                        <span>↑</span> Back to Menu Categories
+                    </a>
+                </div>
+            </div>
+
+            </div>
+        </section>
+
+
+        <section id="about">
+            <div class="container two-col">
+                <div class="about-text">
+                    <h2>Flavours for Every Mood</h2>
+                    <div class="divider"></div>
+                    <p><strong>Multi-Cuisine Restaurant:</strong> From Comforting local Dishes to global favourites, our
+                        kitchen serves up something for every taste. Savour Flaourful experiences from breakfast to
+                        dinner in cozy, elegant etting that match very mood.</p>
+                    <p>Whether you're craving quiet meal, family gathering, or a cheerful dinner with colleagues, we've
+                        got you covered.</p>
+                </div>
+                <div class="about-image-placeholder" id="img-about"></div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="contact">
+        <div class="container footer-content">
+            <div class="footer-col">
+                <h4>Shell Restaurant</h4>
+                <p>9, Erikarai/Lake View Road,<br>Pudhukuppam Village, Purnankuppam,<br>Puducherry - 605007</p>
+            </div>
+            <div class="footer-col">
+                <h4>Hours</h4>
+                <p>Breakfast: 7:00 - 10:00<br>Lunch: 12:30 - 15:00<br>Dinner: 19:00 - 22:00</p>
+            </div>
+            <div class="footer-col">
+                <h4>Contact</h4>
+                <p>+91 89258 98913<br>fnb.theshore@gmail.com</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Shell Restaurant. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <button class="back-to-top" id="backToTopBtn" title="Back to Top">Top</button>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
