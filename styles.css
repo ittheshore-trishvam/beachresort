@@ -440,6 +440,7 @@ header nav {
 .dietary-symbols {
     font-size: 0.85rem;
     opacity: 0.8;
+    white-space: nowrap;
 }
 
 .menu-desc {
@@ -590,6 +591,142 @@ footer .footer-col p {
     transform: translateY(-3px);
 }
 
+/* Swiggy-Style Category Headers */
+.menu-section-divider {
+    grid-column: 1 / -1;
+    margin: 3rem 0 1.5rem 0;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.08);
+    text-align: left;
+}
+
+.menu-section-divider h3 {
+    font-family: var(--font-body);
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: #3e4152;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin: 0;
+}
+
+/* Ensure inner strong tags match the header weight */
+.menu-section-divider h3 strong {
+    font-weight: 800;
+}
+
+/* Swiggy Style Menu Items */
+.menu-item.swiggy-style-item {
+    grid-column: 1 / -1;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+    border-radius: 0;
+    box-shadow: none;
+    padding: 2rem 0;
+    margin: 0;
+    gap: 1.5rem;
+}
+
+.menu-item.swiggy-style-item:hover {
+    transform: none;
+    box-shadow: none;
+}
+
+.swiggy-style-item .menu-details {
+    flex: 1;
+    padding: 0;
+    text-align: left;
+}
+
+.swiggy-diet-tag {
+    margin-bottom: 0.4rem;
+    font-size: 0.95rem;
+}
+
+.swiggy-style-item .menu-title-price {
+    display: block;
+    border-bottom: none;
+    margin-bottom: 0.5rem;
+    padding-bottom: 0;
+}
+
+.swiggy-style-item h3 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #3e4152;
+    margin-bottom: 0.3rem;
+}
+
+.swiggy-style-item .price {
+    display: block;
+    font-size: 1.1rem;
+    color: #3e4152;
+    font-weight: 600;
+    margin-bottom: 0.8rem;
+}
+
+.swiggy-style-item .menu-desc {
+    color: rgba(2, 6, 12, 0.6);
+    font-size: 0.95rem;
+    line-height: 1.4;
+}
+
+.swiggy-img-wrap {
+    width: 156px;
+    height: 144px;
+    position: relative;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.swiggy-style-item .menu-img-placeholder {
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+    background-size: cover;
+    background-position: center;
+}
+
+.swiggy-add-btn {
+    position: absolute;
+    bottom: -15px;
+    background: #fff;
+    color: #1ba672;
+    font-weight: 800;
+    font-size: 1.1rem;
+    padding: 8px 30px;
+    border-radius: 8px;
+    border: 1px solid #e9e9eb;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: all 0.2s ease;
+    z-index: 2;
+}
+
+.swiggy-add-btn:hover {
+    background: #e3f2ec;
+}
+
+@media (max-width: 600px) {
+    .swiggy-img-wrap {
+        width: 118px;
+        height: 110px;
+    }
+    .swiggy-add-btn {
+        padding: 6px 24px;
+        font-size: 1rem;
+        bottom: -12px;
+    }
+}
+
 /* Responsive */
 @media (max-width: 768px) {
     .nav-links {
@@ -604,5 +741,87 @@ footer .footer-col p {
     .two-col {
         grid-template-columns: 1fr;
         gap: 2rem;
+    }
+}
+/* ==========================================================================
+   Outlets Styling (Restaurants, Room Service & Beverage)
+   ========================================================================== */
+.outlet-selector {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin: 0 auto 3rem auto;
+    background: rgba(255, 255, 255, 0.4);
+    padding: 0.5rem;
+    border-radius: 50px;
+    width: max-content;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    backdrop-filter: var(--glass-blur);
+    -webkit-backdrop-filter: var(--glass-blur);
+    box-shadow: var(--shadow-soft);
+}
+
+.outlet-tab {
+    background: transparent;
+    border: none;
+    color: var(--color-text-muted);
+    font-family: var(--font-body);
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    padding: 0.8rem 2.2rem;
+    transition: var(--transition);
+    border-radius: 40px;
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+}
+
+.outlet-tab.active {
+    background: var(--color-primary);
+    color: #ffffff;
+    box-shadow: 0 4px 15px rgba(0, 139, 139, 0.35);
+}
+
+.outlet-tab:hover:not(.active) {
+    background: rgba(255, 255, 255, 0.6);
+    color: var(--color-primary);
+}
+
+.outlet-content {
+    opacity: 0;
+    display: none;
+    transition: opacity 0.4s ease;
+}
+
+.outlet-content.active {
+    display: block;
+    opacity: 1;
+    animation: fadeInOutlet 0.6s ease forwards;
+}
+
+@keyframes fadeInOutlet {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 768px) {
+    .outlet-selector {
+        gap: 0.4rem;
+        padding: 0.4rem;
+        width: 100%;
+        max-width: 420px;
+        box-sizing: border-box;
+    }
+    .outlet-tab {
+        padding: 0.6rem 1.2rem;
+        font-size: 0.85rem;
+        gap: 0.4rem;
     }
 }
