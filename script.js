@@ -1,43 +1,74 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Menu Filtering
-    const tabs = document.querySelectorAll('.menu-tab');
-    const items = document.querySelectorAll('.menu-item, .menu-section-divider, .menu-note');
-    const menuGrid = document.querySelector('.menu-grid');
+    // Outlet Switching
+    const outletTabs = document.querySelectorAll('.outlet-tab');
+    const outletContents = document.querySelectorAll('.outlet-content');
 
-    tabs.forEach(tab => {
+    outletTabs.forEach(tab => {
         tab.addEventListener('click', () => {
-            // Remove active class from all tabs
-            tabs.forEach(t => t.classList.remove('active'));
+            // Remove active class from all outlet tabs
+            outletTabs.forEach(t => t.classList.remove('active'));
             // Add active class to clicked tab
             tab.classList.add('active');
 
-            const category = tab.getAttribute('data-category');
+            const targetOutlet = tab.getAttribute('data-outlet');
 
-            items.forEach(item => {
-                const itemCategory = item.getAttribute('data-category');
-
-                if (category === 'all' || itemCategory === category) {
-                    item.style.display = 'block';
-                    // Optional: Add fade-in animation
-                    item.style.animation = 'fadeIn 0.5s ease-out forwards';
+            // Show/hide outlet contents
+            outletContents.forEach(content => {
+                if (content.id === `outlet-${targetOutlet}`) {
+                    content.classList.add('active');
+                    // Reset menu filtering to "all" for the newly active outlet
+                    const allTab = content.querySelector('.menu-tab[data-category="all"]');
+                    if (allTab) {
+                        // Click programmatically without smooth scroll triggers if possible,
+                        // but since it's user action we can trigger normally.
+                        allTab.click();
+                    }
                 } else {
-                    item.style.display = 'none';
+                    content.classList.remove('active');
                 }
             });
+        });
+    });
 
-            // Scroll to menu grid when category changes (User request)
-            if (menuGrid) {
-                const offset = 100; // Offset for sticky header
-                const bodyRect = document.body.getBoundingClientRect().top;
-                const elementRect = menuGrid.getBoundingClientRect().top;
-                const elementPosition = elementRect - bodyRect;
-                const offsetPosition = elementPosition - offset;
+    // Menu Filtering scoped per outlet
+    outletContents.forEach(outlet => {
+        const tabs = outlet.querySelectorAll('.menu-tab');
+        const items = outlet.querySelectorAll('.menu-item, .menu-section-divider');
+        const menuGrid = outlet.querySelector('.menu-grid');
 
-                window.scrollTo({
-                    top: offsetPosition,
-                    behavior: 'smooth'
+        tabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                // Remove active class from tabs in this outlet only
+                tabs.forEach(t => t.classList.remove('active'));
+                tab.classList.add('active');
+
+                const category = tab.getAttribute('data-category');
+
+                items.forEach(item => {
+                    const itemCategory = item.getAttribute('data-category');
+
+                    if (category === 'all' || itemCategory === category) {
+                        item.style.display = 'block';
+                        item.style.animation = 'fadeIn 0.5s ease-out forwards';
+                    } else {
+                        item.style.display = 'none';
+                    }
                 });
-            }
+
+                // Scroll to menu grid of this outlet when category changes
+                if (menuGrid) {
+                    const offset = 100; // Offset for sticky header
+                    const bodyRect = document.body.getBoundingClientRect().top;
+                    const elementRect = menuGrid.getBoundingClientRect().top;
+                    const elementPosition = elementRect - bodyRect;
+                    const offsetPosition = elementPosition - offset;
+
+                    window.scrollTo({
+                        top: offsetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            });
         });
     });
 
@@ -65,24 +96,29 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // Back to Categories button
-    const backToCatsBtn = document.getElementById('back-to-categories-btn');
-    if (backToCatsBtn) {
-        backToCatsBtn.addEventListener('click', () => {
-            const categories = document.querySelector('.menu-categories');
-            if (categories) {
-                const offset = 120;
-                const bodyRect = document.body.getBoundingClientRect().top;
-                const elementRect = categories.getBoundingClientRect().top;
-                const elementPosition = elementRect - bodyRect;
-                const offsetPosition = elementPosition - offset;
+    const backToCatsBtns = document.querySelectorAll('.back-to-categories');
+    backToCatsBtns.forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.preventDefault();
+            // Find the closest ancestor outlet content container
+            const parentOutlet = btn.closest('.outlet-content');
+            if (parentOutlet) {
+                const categories = parentOutlet.querySelector('.menu-categories');
+                if (categories) {
+                    const offset = 120;
+                    const bodyRect = document.body.getBoundingClientRect().top;
+                    const elementRect = categories.getBoundingClientRect().top;
+                    const elementPosition = elementRect - bodyRect;
+                    const offsetPosition = elementPosition - offset;
 
-                window.scrollTo({
-                    top: offsetPosition,
-                    behavior: 'smooth'
-                });
+                    window.scrollTo({
+                        top: offsetPosition,
+                        behavior: 'smooth'
+                    });
+                }
             }
         });
-    }
+    });
 
     // Back to Top Button Logic
     const backToTopBtn = document.getElementById('backToTopBtn');
