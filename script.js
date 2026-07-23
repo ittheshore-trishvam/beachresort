@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Menu Filtering scoped per outlet
     outletContents.forEach(outlet => {
         const tabs = outlet.querySelectorAll('.menu-tab');
-        const items = outlet.querySelectorAll('.menu-item, .menu-section-divider');
+        const items = outlet.querySelectorAll('.menu-item, .menu-section-divider, .menu-sub-heading');
         const menuGrid = outlet.querySelector('.menu-grid');
 
         tabs.forEach(tab => {
